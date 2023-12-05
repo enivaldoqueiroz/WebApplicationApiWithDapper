@@ -10,7 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<DbSession>();
+//builder.Services.AddScoped<DbSession>();
+builder.Services.AddScoped<DbSessionNpgsql>();
 builder.Services.AddTransient<ITarefaRepository, TarefaRepository>();
 
 var app = builder.Build();
